@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+	}
+.header{
+	background:#CCC;
+	height:80px;
+	width:100%;
+	position:fixed;
+	}
+ul li{
+	float:left;
+	font-size:40px;
+	height:40px;
+	margin-left:10px;
+	list-style-type:none;
+	color:#000;
+	transition:300ms;
+	}
+
+@media(max-width:760px){
+	 ul li{
+		float:none;
+		left:10px;
+		top:10px;
+		transition:300ms;
+		}
+	.header{
+		height:100%;
+		width:auto;
+		transition:300ms;
+		}
+	}
