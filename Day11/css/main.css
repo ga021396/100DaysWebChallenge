@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.header{
+	height:100vh;
+	background-image:url(../images/image02.jpg);
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:center center;
+	}
+.cover{
+	z-index:3;
+	position:absolute;
+	height:100%;
+	width:100%;
+	background-color:rgba(0,0,0,.4);
+	}
