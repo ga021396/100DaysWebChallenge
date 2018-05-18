@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day16</title>
+</head>
+
+<body>
+
+<style>
+.aa{
+	background:#C9F;
+	width:200px;
+	height:200px;
+	}
+</style>
+<input type="button" id="button" onClick="showHidden()">
+<div id="aa" class="aa" onMouseOver="big()" onMouseOut="small()"></div>
+
+<script>
+var aa =document.getElementById('aa');
+
+function big(){
+aa.style.width='600px';
+aa.style.height='600px';
+aa.style.background="red";
+}
+function small(){
+	aa.style.width='100px';
+	aa.style.height='100px';
+	aa.style.background='green';
+	}
+function showHidden(){
+	if(aa.style.display=='none')
+	aa.style.display='block';
+	else
+	aa.style.display='none';
+	}
+</script>
+</body>
+</html>
