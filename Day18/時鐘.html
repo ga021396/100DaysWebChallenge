@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day18</title>
+</head>
+
+<body>
+
+<style>
+  
+</style>
+    
+<script>
+    window.onload=function(){
+    function toDou(n){
+        if(n<10)
+            return "0"+n;
+        else
+            return ''+n;
+    }
+    function timer(){
+    var oDate=new Date();
+    var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+        alert(str);
+    }
+    var oDATA2=new Date();
+        alert(oDATA2.getMonth());
+    //setInterval(timer,1000);
+        }
+</script>
+    
+</body>
+</html>

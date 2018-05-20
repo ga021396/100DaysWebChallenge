@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day16</title>
+</head>    
+<style>
+    #div1{
+        width: 400px;
+        height: auto;
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+    #div1 ul{
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width:400px;
+    }
+    #div1 ul li{
+        margin: 5px;
+        position: relative;
+        float: left;
+        color: aliceblue;
+        width: 100px;
+        height:100px;
+        background: #000;
+        list-style-type: none;
+        text-align: center;
+    }
+    #div2{
+        position: relative;
+        width: 400px;
+        height: auto;
+        text-align: center;
+    }
+    #div1 .active{
+        background: rgba(255,0,0,1);
+    }
+</style>
+<body>
+<div id="div1">
+    <ul>
+        <li class="active">一月</li>
+        <li>二月</li>
+        <li>三月</li>
+        <li>四月</li>
+        <li>五月</li>
+        <li>六月</li>
+        <li>七月</li>
+        <li>八月</li>
+        <li>九月</li>
+        <li>十月</li>
+        <li>十一月</li>
+        <li>十二月</li>
+    </ul>
+    <div id="div2">asdhaishdpiash</div>
+    </div>
+    
+    
+    
+<script>
+window.onload=function(){
+var li=document.getElementsByTagName('li');
+var div1=document.getElementById('div1');
+var div2=document.getElementById('div2');
+var content=['一月蹦蹦','二月蹦蹦','三月','四月'];
+    
+    
+    for(i=0;i<li.length;i++)
+    {       
+        li[i].index=i;
+            li[i].onmousemove=function(){
+                for(i=0;i<li.length;i++){
+                    li[i].className="";
+                }
+                this.className="active";
+                div2.innerHTML=(this.index+1)+content[this.index];
+            }
+        };
+}
+</script>
+    
+</body>
+</html>

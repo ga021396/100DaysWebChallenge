@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day18</title>
+</head>
+
+<body>
+<div id="div1" style="width=200px"></div>
+<style>
+    #div1{width: 200px;height: 200px; background: #555;}
+</style>
+    
+<script>
+/*var a=[1,2,3,4,6,3,1,4,1,2,3,19];
+    a.sort(function(a,b){return a-b});
+    a.splice(2,5,55,55,55,55);
+    alert(a);
+var div=document.getElementById('div1');
+    alert(getComputedStyle(div,null).width);*/
+function css(){
+        if(arguments.length==2)
+            return arguments[0].style[arguments[1]];
+    }
+    window.onload=function(){
+        var div=document.getElementById('div1');
+         alert(getComputedStyle(div,null).width);
+       alert(css(div,'width'));
+        
+        
+    }
+</script>
+    
+</body>
+</html>

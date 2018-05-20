@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day16</title>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="全選">
+    <input id="btn2" type="button" value="不選">
+    <input id="btn3" type="button" value="反選">
+    <div id="div">    
+        <input id="chk01" type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+
+<style>
+</style>
+    
+<script>
+var btn1=document.getElementById('btn1');
+var btn2=document.getElementById('btn2');
+var btn3=document.getElementById('btn3');
+var div1=document.getElementById('div');
+var chk=div1.getElementsByTagName('input');
+
+btn1.onclick=function (){
+    for(i=0;i<chk.length;i++)
+        chk[i].checked=true; 
+}
+btn2.onclick=function (){
+    for(i=0;i<chk.length;i++)
+        chk[i].checked=false; 
+}
+btn3.onclick=function (){
+    for(i=0;i<chk.length;i++)
+        if(chk[i].checked==false)
+        chk[i].checked=true; 
+        else
+            chk[i].checked=false; 
+}
+    
+
+
+
+
+
+</script>
+    
+</body>
+</html>

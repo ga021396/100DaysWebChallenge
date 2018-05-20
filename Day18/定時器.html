@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day18</title>
+</head>
+
+<body>
+    <input type="button" id="btn1">
+        <input type="button" id="btn2">
+
+<style>
+</style>
+    
+<script>
+    window.onload=function(){
+        var btn1=document.getElementById('btn1');
+        var btn2=document.getElementById('btn2');
+        var timer=null;
+function show(){
+    
+    alert(123);
+}
+    btn1.onclick=function(){
+    timer=setInterval(show,1000);
+    }
+    btn2.onclick=function(){
+    clearInterval(timer);    
+        
+    }
+    
+    }
+    
+</script>
+    
+</body>
+</html>
