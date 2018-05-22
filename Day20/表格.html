@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY19</title>
+</head>
+<style>
+    #tab {
+        border: solid 1px #000;
+        width:500px;
+        margin: 5px;
+    }
+    td{
+        border: solid 1px #000;
+    }
+</style>
+<body>
+    姓名<input type="text" id="text">
+    年齡<input type="text" id="text2">
+    <input type="button" id="btn1" value="新增">
+    <input type="button" id="btn2" value="搜尋">
+   <table id="tab">
+       <thead>
+           <td>ID</td>
+           <td>Name</td>
+           <td>Age</td> 
+       </thead>
+    <tbody>
+       <tr>
+           <td>1</td>
+           <td>nami</td>
+           <td>22</td>
+        </tr>
+        <tr>
+           <td>2</td>
+           <td>jack</td>
+           <td>25</td>
+        </tr>
+        <tr>
+           <td>3</td>
+           <td>hamu</td>
+           <td>25</td>
+        </tr>
+        <tr>
+           <td>4</td>
+           <td>coco</td>
+           <td>21</td>
+        </tr>
+       </tbody>
+    </table>
+
+    
+    
+    
+<script>
+    window.onload=function(){
+     var New=document.getElementById('btn1');
+     var Src=document.getElementById('btn2');
+     var Name=document.getElementById('text');
+     var Age=document.getElementById('text2');
+     var tab=document.getElementById("tab");
+     var len=tab.tBodies[0].rows.length+1;
+         
+        Src.onclick=function(){
+        for(i=0;i<len;i++)
+           // var stab=tab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+            //var stxt=Name.value.toLowerCase();
+            if(tab.tBodies[0].rows[i].cells[1].innerHTML.search(Name.value)!=-1)
+                tab.tBodies[0].rows[i].style.backgroundColor='red';
+            else
+                tab.tBodies[0].rows[i].style.backgroundColor='';
+                
+        }
+        
+        New.onclick=function(){
+            var Tr=document.createElement('tr');
+            
+            var Td=document.createElement('td');
+            Td.innerHTML=len++;
+            Tr.appendChild(Td);
+            
+            
+            var Td=document.createElement('td');
+            Td.innerHTML=Name.value;
+            Tr.appendChild(Td);
+ 
+            
+            var Td=document.createElement('td');
+            Td.innerHTML=Age.value;
+            Tr.appendChild(Td);
+            
+            var Td=document.createElement('td');
+            Td.innerHTML='<a href="javascript:;">刪除</>';
+            Tr.appendChild(Td);
+            
+            Td.getElementsByTagName('a')[0].onclick=function(){
+                tab.tBodies[0].removeChild(this.parentNode.parentNode);
+            };
+            
+            tab.tBodies[0].appendChild(Tr);
+ 
+            
+        }
+    
+     //alert(tab.tBodies[0].rows[1].cells[1].innerHTML);
+    }
+</script>
+</body>
+</html>

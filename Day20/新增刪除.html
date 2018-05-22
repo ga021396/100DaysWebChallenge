@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY19</title>
+</head>
+<style>
+</style>
+<body>
+    <input type="text" id="text">
+<input id="btn" type="button">
+    <input id="btn2" type="button">
+<ul id="ul"></ul>
+
+    
+    
+    
+    <script>
+    window.onload=function(){
+        var oUl=document.getElementById('ul');
+        var oBtn=document.getElementById('btn');
+        var oBtn2=document.getElementById('btn2');
+        var oText=document.getElementById('text');
+        var aLi=document.getElementsByTagName('li');
+        
+        oBtn.onclick=function(){
+        var oLi=document.createElement('li');
+            oLi.innerHTML=oText.value;
+            oUl.insertBefore(oLi,aLi[0]);            
+            
+        }
+        oBtn2.onclick=function(){
+         oUl.removeChild(oUl.children[0]);
+            
+        }
+        
+    }
+        
+        
+    
+    </script>
+</body>
+</html>
