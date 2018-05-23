@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY21</title>
+</head>
+<style>
+    #div{
+        width:200px;
+        height:200px;
+        background-color: blueviolet;
+        position: absolute;
+        left:-200px;
+    }
+    #span{
+        width:20px;
+        height:100px;
+        background-color: beige;
+        position: absolute;
+        right:-20px;
+        top: 50px;
+        line-height:20px;
+    }
+</style>
+<body>
+    <div id="div">
+    <span id="span">分享到</span>
+    </div>
+    
+      
+<script>
+    window.onload=function(){
+        var div=document.getElementById('div');
+        div.onmousemove=function(){
+            startMove(0);
+        }
+        div.onmouseout=function(){
+            startMove(-200);
+        }    
+    }
+    var timer=null;
+    function startMove(target){
+        
+        var speed=0;
+        clearInterval(timer);
+        timer=setInterval(function(){    
+            if(target>div.offsetLeft)
+            {speed=10;}
+            else
+            {speed=-10;}
+ 
+            if(div.offsetLeft==target){
+                clearInterval(timer);
+               }
+            else{
+               div.style.left=div.offsetLeft+speed+'px';
+            }
+            
+        },30)
+        
+    }
+   
+</script>
+</body>
+</html>

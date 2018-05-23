@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY21</title>
+</head>
+<style>
+    #div{
+        width:200px;
+        height:200px;
+        background-color: blueviolet;
+        position: absolute;
+        opacity: 0.3;
+        filter:alpha(opacity:30);
+    }
+</style>
+<body>
+    <div id="div">
+    </div>
+    
+      
+<script>
+    window.onload=function(){
+        var div=document.getElementById('div');
+        div.onmousemove=function(){
+            startAlpha(100);
+        }
+         div.onmouseout=function(){
+            startAlpha(30);
+        }
+    }
+    
+    var alpha=30;
+    var timer=null;
+    
+    function startAlpha(target){
+        var div=document.getElementById('div');
+         var speed=0;
+        clearInterval(timer);
+       timer=setInterval(function(){
+            if(target>alpha)
+            {speed=2;}
+            else
+            {speed=-2;}
+            
+            if(target==alpha){
+                clearInterval(timer);
+            }
+            else
+                {
+                alpha+=speed;
+                div.style.opacity=alpha/100;
+                }
+            
+        },30);
+    }
+   
+</script>
+</body>
+</html>

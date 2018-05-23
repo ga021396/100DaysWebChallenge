@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY21</title>
+</head>
+<style>
+    
+</style>
+<body>
+
+    <form id="form1" action="#">
+        user:<input type="text" name="user"/><br>
+        password:<input type="password" name="pass"/>
+        <input type="submit">
+        <input type="reset">
+    
+    </form>
+    
+      
+<script>
+    window.onload=function(){
+        var oForm=document.getElementById('form1');
+        oForm.onsubmit=function(){
+            alert(123);
+        }
+        oForm.onreset=function(){
+            alert(456);
+        }
+    }
+</script>
+</body>
+</html>
