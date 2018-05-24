@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY22</title>
+</head>
+<style>
+    div{
+        width:200px;
+        height:200px;
+        background-color: blueviolet;
+        position: relative;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div id="div"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+<script>
+    var div=document.getElementsByTagName('div');
+    window.onload=function(){
+            for(i=0;i<div.length;i++){
+              div[i].onmousemove=function(){
+                  move(this,400);
+              }
+               div[i].onmouseout=function(){
+                  move(this,200);
+              }
+        }
+        
+    }
+    function move(obj,iWidth){
+            obj.style.width=iWidth+"px";
+    }
+   
+</script>
+</body>
+</html>
