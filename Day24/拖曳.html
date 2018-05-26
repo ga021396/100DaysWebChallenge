@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY24</title>
+</head>
+<style>
+    div{width:200px;
+    height:200px;
+    border: 1px solid #000;
+    position: absolute;}
+</style>
+<body>
+<div id="div"></div>
+<script>
+    window.onload=function(){
+        var div=document.getElementById('div');
+        div.onmousedown=function(ev){
+            var disX=ev.clientX-div.offsetLeft;
+            var disY=ev.clientY-div.offsetTop;
+            
+            document.onmousemove=function(ev){
+                var l=ev.clientX-disX;
+                var t=ev.clientY-disY;
+                if(l<0){
+                    l=0;}
+                
+                 if(t<0){
+                    t=0;}
+                
+                if(l>document.documentElement.clientWidth-div.offsetWidth)
+                    { 
+                        l=document.documentElement.clientWidth-div.offsetWidth;
+                    }
+                
+                if(t>document.documentElement.clientHeight-div.offsetHeight)
+                    { 
+                        t=document.documentElement.clientHeight-div.offsetHeight;
+                    }
+                
+                div.style.left=l+'px';
+                div.style.top=t+'px'; 
+            }
+        }
+        document.onmouseup=function(){
+            document.onmousemove=null;
+            document.onmouseup=null;
+        }
+    }
+</script>
+</body>
+</html>
