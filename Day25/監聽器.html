@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY25</title>
+</head>
+<style>
+
+</style>
+<body>
+<input type="button" id="btn" value="123">
+<script>
+    //attachEvent(event,function) ie only
+    //addEventListener(event,function,?)
+    window.onload=function(){
+        var btn=document.getElementById('btn');
+        
+        btn.addEventListener('click',function(){
+          alert(btn.value);
+      },false);
+         btn.addEventListener('click',function(){
+          alert(btn);
+      },false);
+    
+    }
+</script>
+</body>
+</html>
