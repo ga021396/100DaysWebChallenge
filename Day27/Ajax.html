@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY27</title>
+</head>
+<style>
+
+    #card{
+        padding:20px;
+        top: 0;
+        bottom: 0;
+        margin:0 auto;
+        height:400px;
+        width: 300px;
+        border: 1px solid black;
+        transform: translateY(20%);
+        line-height: 36px;
+        border-radius: 5px;
+        font-family:sans-serif;
+        font-size: 20px;
+    }
+    h1{
+    font-family:sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 800;
+    }
+    #btn{
+        width: 100px;
+        height: 25px;
+    }
+</style>
+    <body>
+    <div id="card">
+    <h1>前端修練-精神時光屋API</h1>
+    信箱:<input type="text" id="text" value="ga021396@gmail.com"><br>
+    <input type="button" id="btn" value="驗證">
+    <div id="people"></div>
+    <div id="result"></div>
+    </div>
+<script>
+    //----------------報名人數------------------
+        window.onload=function(){
+        var people=document.getElementById('people');
+        var xl=new XMLHttpRequest();
+            xl.open('get',' https://www.thef2e.com/api/signUpTotal',true);
+            xl.send();
+            xl.onreadystatechange=function(){
+           if(xl.readyState==4&&xl.status==200){
+                people.innerHTML='目前報名人數: '+JSON.parse(xl.responseText).total;
+            }
+         }
+        }
+    //----------------檢查EMAIL------------------
+       var btn=document.getElementById('btn');
+       var result=document.getElementById('result');
+    
+       btn.onclick=function(){
+       var text=document.getElementById('text').value;
+       var email={email:text};
+       var account=JSON.stringify(email);
+       console.log(account);
+       //1 創建
+       var oAjax=new XMLHttpRequest();
+       //2 連結 (方法 文件 非同步)
+       oAjax.open('post',' https://www.thef2e.com/api/isSignUp',true);
+       //2.5 設定格式
+       oAjax.setRequestHeader("Content-type", "application/json");  
+       //3 請求
+       oAjax.send(account);
+       //4 接收
+       oAjax.onreadystatechange=function(){
+           if(oAjax.readyState==4){
+               if(oAjax.status==200){
+                var callbackData = JSON.parse(oAjax.responseText);
+                   if(callbackData.success){
+                       	var date = new Date(callbackData.timeStamp );
+                       result.innerHTML='暱稱:'+callbackData.nickName+'<br />'+callbackData.message+'<br/>'+'時間:'+date;
+                   }
+                   else{
+                       result.innerHTML=callbackData.message;
+                   }
+               }
+               else
+                alert(oAjax.status);
+           }
+       }
+   }
+   
+</script>
+</body>
+</html>
