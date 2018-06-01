@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY28</title>
+</head>
+    <style>
+        div{height:200px;
+        width: 200px;
+        background-color: antiquewhite;
+        position: absolute;
+        margin:10px;
+        display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+<body>
+    <input type="button" value="aaa">
+    <input type="button" value="bbb">
+    <input type="button" value="ccc">
+    
+<div class="show" style="background:#ccc;"></div>
+    <div style="background-color: aqua;"></div>
+    <div style="background-color: brown;"></div>
+    
+<script>
+    var btn=document.getElementsByTagName("input");
+    var div=document.getElementsByTagName('div');
+ window.onload=function(){
+     new tabS();
+ }
+    function tabS(){
+           
+        for(var i=0;i<btn.length;i++){
+            btn[i].index=i;
+            btn[i].onclick=fnclick;
+        }
+    };
+    
+    function fnclick(){
+                for(var j=0;j<btn.length;j++){
+                    div[j].style.display='none';
+                }
+                div[this.index].style.display='block';
+            }  
+    </script>
+</body>
+</html>
