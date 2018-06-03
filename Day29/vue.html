@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY29</title>
+</head>
+    <style>
+   
+    </style>
+<body>
+<div id="app">
+  <input type="text" v-model="NT">
+    <ul>
+        <li>美金:{{americam}}</li>
+        <li>日幣:{{japan}}</li>
+    </ul>
+</div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+   var app = new Vue({
+  el: '#app',
+  data: {
+      NT:0
+  },
+     computed: {
+         japan : function(){
+         return parseInt(this.NT*4);
+     },
+         americam:function(){
+             return parseInt(this.NT/30);
+         }
+     }
+})
+</script>
+</body>
+</html>
