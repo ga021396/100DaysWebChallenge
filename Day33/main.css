@@ -1,0 +1,134 @@
+body,html{
+    background-color: #F2F2F2;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#nav{
+    width:100%;
+    height:92px;
+    background-color: #7828B4;
+    display: flex;
+    align-items: center;
+    
+    
+}
+#nav h1{
+    color: white;
+    margin-left: 7%;
+}
+#nav input{
+    width: 388px;
+    height: 37px;
+    padding-left: 10px;
+    margin-left: 10px;
+    background-color: #7828B4;
+    color: white;
+    border: none;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+#nav i{
+     color: white;
+     margin-left: 12%;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:rgba(255,255,255,0.5);
+}
+/*search*/
+#search{
+    float: left;
+    width: 25%;
+    height: auto;
+    margin-left: 3%;
+    background-color: #EBEBEB ;
+    max-width: 300px;
+}
+#search div{
+    padding-left: 25px;
+}
+#location select{
+    width:80%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+#location,#date{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+#date .date{
+    margin-left: -20px;
+}
+#date input{
+    border: none;
+    width: 58%;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 5%;
+    height: 30px;
+}
+#categories ul{
+    padding-left: 0;
+}
+#categories ul li{
+    list-style: none;
+}
+
+#body{
+    float: left;
+    width:65%;
+    max-width: 780px;
+    height:1000px;
+    padding-left: 5%;
+}
+#body h2{
+    font-weight: 400;
+}
+.result span{
+    border: 1px solid #9013FE;;
+    padding:5px 10px;
+    border-radius: 15px;
+    color: #9013FE;
+    margin-right: 8px;
+}
+.result i{
+    padding-left: 5px;
+    color: #9013FE;
+}
+.card{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    height: 220px;
+}
+.card img{
+    width: 220px;
+    height: 100%;
+}
+.card .introduction{
+    padding-left: 20px;
+    width:100%;
+    background-color:white;
+}
+.introduction h2{
+     color: #9013FE;
+}
+.aut{
+    font-weight: 600;
+    margin-right: 10px;
+}
+.cardResult{
+    color: white;
+    background-color: #D7D7D7; 
+    padding:2px 15px;
+    border-radius: 15px;    
+    font-style: italic;
+}
+.loc{
+    color: #9B9B9B;
+    margin-top: 15px;
+}
+.loc i{
+    color:black;
+    margin-right: 8px;
+}
+.loc span{
+    margin-right: 20px;
+}
