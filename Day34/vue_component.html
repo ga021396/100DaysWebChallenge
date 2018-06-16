@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAY34</title>
+</head>
+<body>
+<div id="app">
+   {{name}}
+   <greet></greet>
+   <greet></greet>
+   <greet></greet>
+    <ol>
+        <game-item v-for="item in games" v-bind:game="item"></game-item>
+    </ol>
+  </div>
+  
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script type="text/x-template" id="my-component">
+  '<p>HELLO VUE IM {{name}}<button v-on:click="change">change</button></p>'
+</script>    
+<script>
+    Vue.component('greet',{
+  template:'#my-component',
+  data:function(){
+    return {
+      name:'Yogaba'
+   }
+  },
+  methods:{
+    change:function(){
+        if(this.name=="Yogaba")
+      this.name="windchi"
+        else
+         this.name="Yogaba"
+    } 
+}
+})
+
+Vue.component('game-item',{
+    props:['game'],
+    template:'<li>{{game.title}}</li>'
+})
+    
+new Vue({
+  el:'#app',
+  data:{
+    name:'123',
+    games:[{title:'UNO'},
+          {title:'drop'},
+          {title:'tiger'}]
+  }
+  
+})
+</script>
+</body>
+</html>
