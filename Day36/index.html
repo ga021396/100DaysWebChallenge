@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端修練_精神時光屋_Week3</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div id="app">
+<div id="nav">
+    <h1>Shoptime</h1>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ORDERS</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li>ADMIN</li>
+    </ul>
+</div>
+
+<div id="title">
+    <h3>OVERVIEW</h3>
+    <h4>2018/06/19</h4>
+</div>
+    
+<div id="total">
+    <div class="math"><h3><i class="fas fa-hand-holding-usd"></i>TOTAL REVENUE</h3><h1 style="color: #7ED321">53,212</h1></div>
+    <div class="math"><h3><i class="fab fa-app-store"></i>TOTAL COST</h3>
+    <h1 style="color: #D0021B">12,440</h1></div>
+    <div class="math"><h3><i class="fas fa-money-bill"></i>NET INCOME</h3>
+    <h1 style=" color: #4A90E2">42,678</h1></div>
+</div>
+
+<div id="activity"><h2>Activity</h2>
+    <canvas id="myChart"></canvas>
+    </div>
+    
+<div id="footer">
+    <div class="order">
+        <h2>Transaction Web</h2>
+        <company v-for="item in companies" v-bind:company="item"></company>
+    </div>
+    <div class="order">
+        <h2>Latest Orders</h2>
+        <order v-for="item in items" v-bind:item="item"></order>
+    </div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script type="text/x-template" id="my-component2">
+ <div class="company">
+            <div class="content1">
+                <i v-bind:class="company.logo"></i>
+                <h3>{{company.name}}</h3>
+            </div>
+            <div class="content2">
+                <h3>{{company.cost}}</h3>
+                <i class="fas fa-arrow-up"></i>
+                <h3>{{company.up}}</h3>
+            </div>
+        </div>
+</script>
+<script type="text/x-template" id="my-component">
+ <div class="order-item">
+            <div class="order-image">
+                <img src="https://images.unsplash.com/photo-1514263501277-c42a026950b1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=510cd1500a3fdabbaab5d6cf58d0234c&auto=format&fit=crop&w=600&q=60">
+            </div>
+            <div class="order-content">
+                <h3>{{item.title}}</h3>
+                <p><i class="fas fa-clock" style="font-size: 14px;"></i>{{item.time}}</p>
+                <p><i class="fas fa-male" style="font-size: 25px; margin-right: 14px;"></i>{{item.creator}}</p>
+            </div>
+            <div class="order-cost">
+                <p>Total</p>
+                <h3>{{item.cost}}</h3>
+            </div>
+        </div>
+</script>
+<script>
+         Vue.component('order',{
+               props:['item'],
+  template:'#my-component',
+})
+    Vue.component('company',{
+               props:['company'],
+  template:'#my-component2',
+})
+        new Vue({
+            el:'#app',
+            data:{items:[{title:"Plant",creator:'Cliff',time:'2018/06/22',cost:'3,200'},
+                         {title:"T-shirt",creator:'Bob',time:'2018/05/12',cost:'4,800'},
+                         {title:"Shoes",creator:'Shino',time:'2018/04/30',cost:'1,600'},
+                    ],
+                  companies:[{logo:'fab fa-facebook-square',name:'facebook.com',cost:'45,582',up:'20%'},
+                            {logo:'fab fa-google',name:'google.com',cost:'25,382',up:'12%'},
+                            {logo:'fab fa-amazon',name:'amazon.com',cost:'14,990',up:'8%'},
+                            {logo:'fab fa-wordpress-simple',name:'wordpress',cost:'9,453',up:'5%'}]
+                 }
+        })
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="js.js"></script>
+
+ 
+</body>
+</html>

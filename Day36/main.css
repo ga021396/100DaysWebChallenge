@@ -1,0 +1,225 @@
+body,html{
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#nav{
+    top: 0;
+    height: 70px;
+    width:100%;
+    background-color:black;
+    color: white;
+    display: flex;
+}
+#nav h1{
+    margin-top: 20px;
+    margin-left: 4%;
+    font-size: 24px;
+}
+#nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #9B9B9B;
+}
+#nav ul li a:hover{
+    color:white;
+}
+#nav ul li:last-child{
+    color:white;
+    right:0;
+    position: absolute;
+    margin-right: 4%;
+}
+#nav ul{
+    list-style: none;
+    margin-top: 23px;
+    margin-left: 30px;
+}
+#nav ul li{
+    color: #9B9B9B;
+    font-size: 18px;
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+}
+
+#title{
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 92%;
+    height: 70px;
+    display: flex;
+    justify-content:space-between;
+}
+#title h4{
+    color: #9B9B9B;
+}
+
+#total{
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 92%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+}
+#total .math{
+    width: 32%;
+    height: 140px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+}
+.math i{
+    margin-right: 5px;
+}
+.math h3{
+    font-size: 16px;
+}
+.math h1{
+    font-size: 36px;
+}
+
+#activity{
+    margin-top: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+}
+#activity h2{
+    padding: 40px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+#myChart {
+    margin-left: auto;
+    margin-right: auto;
+   height: 300px !important;
+   width: 80% !important;
+}
+
+#footer{
+    margin-top: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 92%;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+#footer .order{
+    width:49%;
+    height: 460px;
+    background-color: white;
+    box-shadow: 0 0 10px 5px #EBEBEB;
+    border-radius: 3px;
+}
+.order h2{
+    padding-left: 40px;
+    margin-bottom: 5px;
+}
+.company{
+    margin-top: 0;
+    width: 80%;
+    height: 100px;
+    border-bottom: 1px solid #EBEBEB;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+.company:last-child{
+     border-bottom: none;
+}
+.content1{
+    display: flex;
+}
+.company .content1 i{
+    font-size: 55px;
+}
+.company .content1 h3{
+    margin-left: 20px;
+    color: #9B9B9B;
+    font-weight: 500;
+}
+.content2 {
+    display: flex; 
+    align-items: center;
+}
+.content2 h3{
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.content2 h3:last-child{
+    font-size: 16px;
+    color: #7ED321;
+}
+.content2 i{
+    margin-left: 10px;
+    color:  #7ED321;
+}
+
+.order-item{
+    margin-top: 0;
+    width: 80%;
+    height: 130px;
+    border-bottom: 1px solid #EBEBEB;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order-image{
+    height: 100px;
+    width:100px;
+}
+.order-image img{
+    height: 100px;
+    width:100px;
+}
+.order-content{
+    height: 100px;
+    width:50%;
+}
+.order-content h3,p{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.order-content p{
+    color:#9B9B9B;
+}
+.order-content h3{
+    margin-bottom: 10px;
+        font-size: 20px;
+}
+.order-content i{
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.order-cost{
+    height: 100px;
+    width: 25%;
+    text-align: right;
+}
+.order-cost p{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.order-cost h3{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.order-item:last-child{
+    border-bottom: none;
+}
