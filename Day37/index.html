@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端修練_精神時光屋_Week2</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="app">
+    <div id="nav">
+        <h1 id="hav">HaveFun</h1>
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Explore your own activites">
+    </div>
+    <div id="search">
+        <div id="location">
+             <h2>Location</h2>
+             <form>
+                 <select name="YourLocation">
+                 <option value="Taipei">台北</option>
+                 <option value="Taoyuan">桃園</option>
+                 <option value="Hsinchu">新竹</option>
+                 <option value="Miaoli">苗栗</option>
+                 </select>
+            </form>
+        </div>
+        <div id="date">
+             <h2>Date</h2>
+            <div class="date">
+                <span>from</span>
+                <input id="date" type="date" value="2017-06-01">
+            </div>
+            <div class="date">
+                <span style="margin-left: 18px;">to</span>
+                <input id="date" type="date" value="2017-06-01">
+            </div>
+        </div>
+        <div id="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><input type="checkbox" id="all">All</li>
+                <li><input type="checkbox">Entertainment</li>
+                <li><input type="checkbox">Food</li>
+                <li><input type="checkbox">Learing</li>
+                <li><input type="checkbox">Outdoors</li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+        <h2 class="howmany">Showing 15 results by...</h2>
+        <div class="result">
+            <span>taipei<i class="far fa-times-circle"></i></span>
+            <span>Sports<i class="far fa-times-circle"></i></span>
+            
+        </div>
+        <div id="list">
+<!--     
+         <div class="card">
+            <div class="img">
+                 <img src="Images/001.jpg">
+            </div>
+            <div class="introduction">
+                <h2 class="name">hello world</h2>
+                <p class="purpose">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                <span class="aut">Ethan Foster</span>
+                <span class="cardResult">Entertainment</span>
+                <div class="loc">
+                    <span ><i class="fas fa-map-marker-alt"></i><span class="address">Taipei city</span></span>
+                    <span ><i class="far fa-calendar-alt"></i><span class="opentime">2018/06/07-2018/06/17</span></span>
+                </div>
+            </div>
+        </div>
+-->
+    </div>
+    </div>
+    </div>
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script type="text/x-template" id="my-component">
+   <div class="card">
+            <div class="img">
+                 <img src="Images/001.jpg">
+            </div>
+            <div class="introduction">
+                <h2>hello world</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                <span class="aut">Ethan Foster</span>
+                <span class="cardResult">Entertainment</span>
+                <div class="loc">
+                    <span ><i class="fas fa-map-marker-alt"></i>Taipei city</span>
+                    <span ><i class="far fa-calendar-alt"></i>2018/06/07-2018/06/17</span>
+                </div>
+            </div>
+        </div>
+</script>
+    <script>
+         Vue.component('greet',{
+  template:'#my-component',
+})
+        new Vue({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>
