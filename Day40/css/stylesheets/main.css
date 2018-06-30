@@ -1,0 +1,468 @@
+/* line 11, ../sass/main.scss */
+body, html, h1 {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 16, ../sass/main.scss */
+.box {
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 2000px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "title title" "container1 container5" "container1 container5" "container1 container5" "container1 container5" "container1 container5" "container1 container5" "container2 container6" "container2 container6" "container2 container6" "container2 container6" "container3 container6" "container3 container6" "container3 container7" "container3 container7" "container4 container7" "container4 container7" "container4 container7" "container4 container7" "container4 container7";
+}
+/* line 45, ../sass/main.scss */
+.box div {
+  position: relative;
+}
+
+/* line 49, ../sass/main.scss */
+.title {
+  grid-area: title;
+}
+/* line 51, ../sass/main.scss */
+.title .tag {
+  font-size: 20px;
+  position: absolute;
+  width: auto;
+  padding: 0 10px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* line 62, ../sass/main.scss */
+.title .txt {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  font-size: 72px;
+  font-weight: 700;
+  transform: translate(0, 40%);
+}
+
+/* line 71, ../sass/main.scss */
+.container1 {
+  grid-area: container1;
+}
+/* line 73, ../sass/main.scss */
+.container1 .img {
+  height: 400px;
+  width: 480px;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&auto=format&fit=crop&w=1868&q=80);
+  transform: translateY(100px);
+}
+/* line 82, ../sass/main.scss */
+.container1 h1 {
+  z-index: 2;
+  position: absolute;
+  font-size: 48px;
+  transform: translateY(83px);
+}
+/* line 88, ../sass/main.scss */
+.container1 h1::before {
+  position: absolute;
+  content: 'LINEN BLAZER';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 94, ../sass/main.scss */
+.container1 .border {
+  z-index: -1;
+  position: absolute;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  width: 240px;
+  height: 200px;
+  transform: translate(300px, 50px);
+}
+/* line 103, ../sass/main.scss */
+.container1 h2 {
+  position: absolute;
+  font-size: 48px;
+  transform: translateY(460px);
+}
+/* line 107, ../sass/main.scss */
+.container1 .patt {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  transform: translate(60px, 460px);
+  background-image: url(https://upload.cc/i1/2018/07/01/YAR2y8.png);
+}
+/* line 114, ../sass/main.scss */
+.container1 .outfit {
+  font-weight: 700;
+  position: absolute;
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(430px, 420px) rotate(90deg);
+}
+
+/* line 122, ../sass/main.scss */
+.container2 {
+  grid-area: container2;
+}
+/* line 124, ../sass/main.scss */
+.container2 div, .container2 h2 {
+  position: absolute;
+}
+/* line 127, ../sass/main.scss */
+.container2 .img {
+  background-size: cover;
+  background-position: center center;
+  width: 480px;
+  height: 200px;
+  background-image: url(https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0f994eef47e5fb1a67849703cc961b3&auto=format&fit=crop&w=1050&q=80);
+  transform: translate(0, 100px);
+}
+/* line 135, ../sass/main.scss */
+.container2 .backpatt {
+  z-index: -1;
+  width: 240px;
+  height: 200px;
+  background-color: #50E3C2;
+  transform: translate(0, 50px);
+}
+/* line 142, ../sass/main.scss */
+.container2 .border {
+  z-index: -1;
+  width: 240px;
+  height: 200px;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  transform: translate(300px, 150px);
+}
+/* line 150, ../sass/main.scss */
+.container2 .t03 {
+  font-size: 48px;
+  transform: translate(480px, 260px);
+}
+/* line 154, ../sass/main.scss */
+.container2 .patt {
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(25px, 280px);
+}
+/* line 159, ../sass/main.scss */
+.container2 .super {
+  z-index: 2;
+  font-size: 48px;
+  transform: translate(150px, 0);
+}
+/* line 164, ../sass/main.scss */
+.container2 .super::before {
+  position: absolute;
+  content: 'SUPER SKINNY';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 171, ../sass/main.scss */
+.container3 {
+  grid-area: container3;
+}
+/* line 173, ../sass/main.scss */
+.container3 .img {
+  height: 200px;
+  width: 240px;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://images.unsplash.com/photo-1525448198276-222de3961638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43fb25556cdbd191e520c7f28739e40d&auto=format&fit=crop&w=1050&q=80);
+  transform: translate(240px, 100px);
+}
+/* line 182, ../sass/main.scss */
+.container3 h1 {
+  z-index: 2;
+  position: absolute;
+  font-size: 48px;
+  transform: translate(0, 150px);
+}
+/* line 188, ../sass/main.scss */
+.container3 h1::before {
+  position: absolute;
+  content: 'SWEATSHIRTS';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 194, ../sass/main.scss */
+.container3 .border {
+  z-index: -1;
+  position: absolute;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  width: 240px;
+  height: 100px;
+  transform: translate(120px, 250px);
+}
+/* line 203, ../sass/main.scss */
+.container3 h2 {
+  position: absolute;
+  font-size: 48px;
+  transform: translate(120px, 260px);
+}
+/* line 207, ../sass/main.scss */
+.container3 .patt {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  transform: translate(60px, 50px);
+  background-image: url(https://upload.cc/i1/2018/07/01/YAR2y8.png);
+}
+/* line 214, ../sass/main.scss */
+.container3 .jacket {
+  font-weight: 700;
+  position: absolute;
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(480px, 70px);
+}
+
+/* line 222, ../sass/main.scss */
+.container4 {
+  grid-area: container4;
+}
+/* line 224, ../sass/main.scss */
+.container4 div, .container4 h2 {
+  position: absolute;
+}
+/* line 227, ../sass/main.scss */
+.container4 .img {
+  background-size: cover;
+  background-position: center center;
+  width: 240px;
+  height: 400px;
+  background-image: url(https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63ff45d79414b3166b08b800a32018be&auto=format&fit=crop&w=634&q=80);
+  transform: translate(0, 100px);
+}
+/* line 235, ../sass/main.scss */
+.container4 .backpatt {
+  z-index: -1;
+  width: 120px;
+  height: 200px;
+  background-color: #50E3C2;
+  transform: translate(240px, 300px);
+}
+/* line 242, ../sass/main.scss */
+.container4 .border {
+  z-index: -1;
+  width: 240px;
+  height: 300px;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  transform: translate(50px, 50px);
+}
+/* line 250, ../sass/main.scss */
+.container4 .t07 {
+  font-size: 48px;
+  transform: translate(300px, 400px);
+}
+/* line 254, ../sass/main.scss */
+.container4 .shirt {
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(0, 50px);
+}
+/* line 259, ../sass/main.scss */
+.container4 .edi {
+  z-index: 2;
+  font-size: 48px;
+  transform: translate(170px, 120px) rotate(90deg);
+}
+/* line 264, ../sass/main.scss */
+.container4 .edi::before {
+  position: absolute;
+  content: 'EDITION';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 271, ../sass/main.scss */
+.container5 {
+  grid-area: container5;
+}
+/* line 273, ../sass/main.scss */
+.container5 div, .container5 h2 {
+  position: absolute;
+}
+/* line 276, ../sass/main.scss */
+.container5 .img {
+  background-size: cover;
+  background-position: center center;
+  width: 240px;
+  height: 200px;
+  background-image: url(https://images.unsplash.com/photo-1514632542677-48fae74a01b2?ixlib=rb-0.3.5&s=50945fdb784e64361154c62785542531&auto=format&fit=crop&w=1868&q=80);
+  transform: translate(120px, 200px);
+}
+/* line 284, ../sass/main.scss */
+.container5 .backpatt {
+  z-index: -1;
+  width: 240px;
+  height: 200px;
+  background-color: #50E3C2;
+  transform: translate(180px, 150px);
+}
+/* line 291, ../sass/main.scss */
+.container5 .border {
+  z-index: -1;
+  width: 240px;
+  height: 200px;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  transform: translate(240px, 100px);
+}
+/* line 299, ../sass/main.scss */
+.container5 .t02 {
+  font-size: 48px;
+  transform: translate(425px, 50px);
+}
+/* line 303, ../sass/main.scss */
+.container5 .basic {
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(100px, 150px);
+}
+/* line 308, ../sass/main.scss */
+.container5 .free {
+  z-index: 2;
+  font-size: 48px;
+  transform: translate(240px, 360px);
+}
+/* line 313, ../sass/main.scss */
+.container5 .free::before {
+  position: absolute;
+  content: 'FREELIFT';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 320, ../sass/main.scss */
+.container6 {
+  grid-area: container6;
+}
+/* line 322, ../sass/main.scss */
+.container6 .img {
+  height: 400px;
+  width: 240px;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&s=593101f82127d40025c1d27fa186ccc7&auto=format&fit=crop&w=687&q=80);
+  transform: translate(240px, 100px);
+}
+/* line 331, ../sass/main.scss */
+.container6 h1 {
+  z-index: 2;
+  position: absolute;
+  font-size: 48px;
+  transform: translate(135px, 100px) rotate(-90deg);
+}
+/* line 337, ../sass/main.scss */
+.container6 h1::before {
+  position: absolute;
+  content: 'DENIM';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 343, ../sass/main.scss */
+.container6 .border {
+  z-index: -1;
+  position: absolute;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  width: 240px;
+  height: 200px;
+  transform: translate(180px, 0);
+}
+/* line 352, ../sass/main.scss */
+.container6 h2 {
+  position: absolute;
+  font-size: 48px;
+  transform: translate(180px, 400px);
+}
+/* line 356, ../sass/main.scss */
+.container6 .patt {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  transform: translate(240px, 460px);
+  background-image: url(https://upload.cc/i1/2018/07/01/YAR2y8.png);
+}
+/* line 363, ../sass/main.scss */
+.container6 .cadual {
+  font-weight: 700;
+  position: absolute;
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(350px, -15px) rotate(90deg);
+}
+
+/* line 371, ../sass/main.scss */
+.container7 {
+  grid-area: container7;
+}
+/* line 373, ../sass/main.scss */
+.container7 div, .container7 h2 {
+  position: absolute;
+}
+/* line 376, ../sass/main.scss */
+.container7 .img {
+  background-size: cover;
+  background-position: center center;
+  width: 480px;
+  height: 400px;
+  background-image: url(https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&auto=format&fit=crop&w=634&q=80);
+  transform: translate(0, 100px);
+}
+/* line 384, ../sass/main.scss */
+.container7 .backpatt {
+  z-index: -1;
+  width: 240px;
+  height: 200px;
+  background-color: #50E3C2;
+  transform: translate(-50px, 300px);
+}
+/* line 391, ../sass/main.scss */
+.container7 .border {
+  z-index: -1;
+  width: 480px;
+  height: 200px;
+  border: 20px solid #50E3C2;
+  box-sizing: border-box;
+  transform: translate(0, 350px);
+}
+/* line 399, ../sass/main.scss */
+.container7 .t06 {
+  font-size: 48px;
+  transform: translate(-55px, 210px);
+}
+/* line 403, ../sass/main.scss */
+.container7 .classic {
+  font-size: 24px;
+  font-style: italic;
+  transform: translate(180px, 480px);
+}
+/* line 408, ../sass/main.scss */
+.container7 .vin {
+  z-index: 2;
+  font-size: 48px;
+  transform: translate(120px, 0);
+}
+/* line 413, ../sass/main.scss */
+.container7 .vin::before {
+  position: absolute;
+  content: 'VINTAGE DENIM';
+  transform: translateY(-10px);
+  color: rgba(0, 0, 0, 0.3);
+}
