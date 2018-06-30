@@ -1,0 +1,12 @@
+/* line 1, ../sass/style.scss */
+.header {
+  background-color: aquamarine;
+  height: 200px;
+  width: 200px;
+}
+/* line 5, ../sass/style.scss */
+.header .title {
+  background-color: blueviolet;
+  height: 200px;
+  width: 200px;
+}
