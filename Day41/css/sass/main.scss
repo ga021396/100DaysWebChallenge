@@ -1,0 +1,97 @@
+$img:url(https://upload.cc/i1/2018/07/03/Ebutzs.png);
+body,html{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.nav{
+    height: 74px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: #50FF44;
+    line-height: 74px;
+    h1{ 
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+        font-size: 36px
+    }
+}
+.body{
+    height: auto;
+    width: 620px;
+    margin: 32px auto;
+}
+.main{
+    display: flex;
+}
+.main-img{
+    width: 292px;
+    border: 4px solid black;
+    img{
+        width: 292px;
+        height: 438px;
+    }
+}
+.introduction{
+    h1{ 
+        margin: 0;
+        padding: auto 8px;
+        background-color: black;
+        color: white;
+        font-size: 36px;
+        text-align: center;
+    }
+    p{
+      margin-left: 20px;
+      padding-bottom: 16px; 
+    }
+    .content{
+        width: 220px;
+        float: left;
+        margin:8px auto;
+
+    }
+    .tag{
+        float: left;
+        width: 52px;
+        font-weight: 700;
+        margin:8px 20px;
+    }
+    .sum{
+        clear: both;
+        position: relative;
+        font-weight: 700;
+        padding-top:24px;
+        padding-left: 20px;
+    }
+}
+.chapters{
+    border: 4px solid black;
+    box-sizing: border-box;
+    width: 620px;
+    p{
+        padding-left: 24px;
+        font-weight: 700;
+    }
+    .new{
+        margin-left: 24px;
+        background-color: #50FF44;
+        color: black;
+        padding-right: 5px;
+        padding-left: 5px;
+        border-radius: 5px;
+    }
+}
+.all-tag{
+    margin: 0;
+    margin-top: 28px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    width:181px;
+    height: 44px;
+}
