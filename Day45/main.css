@@ -1,0 +1,113 @@
+body,html{
+    margin: 0;
+    padding: 0;
+	font-family:  "Kokoro";
+    height: 100vh;
+    width:100VW;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    height:600px;
+    width:1000px;
+    border-radius: 10px;
+    box-shadow: -15px 15px 50px 0 #001D2E;
+    box-sizing: border-box;
+    background-image: url(https://upload.cc/i1/2018/07/31/mU2vyg.png
+);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.main{
+    float: left;
+    height: 100%;
+    width: 40%;
+}
+.main-rune{
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.sup{
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+.runes{
+    width: 100%;
+    height:20%;
+    margin-left: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.text{
+    margin-left: 10px;
+    z-index: 10;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+}
+.text h2{
+    font-size: 16px;
+    margin: 0;
+}
+.text p{
+    color:#bebebe;
+    font-size: 14px;
+    margin: 0;
+}
+.rune{
+    margin-left: 15px;
+    margin-right: 15px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #48b1bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rune img{
+    height:100px;
+    width:100px;
+}
+.select{
+    transition: all 1s;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(80px);
+}
+.select img{
+    margin-top: 10px;
+    height: 75px;
+    width:75px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.selected{
+    opacity: 0;
+    height: 100px;
+    width:100px;
+}
+.sec img{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width:50px;
+}
+.rune .sec_rune{
+    height: 50px;
+    width:50px;
+}
+.active{
+    transition: 1s all;
+    box-shadow: 0 0 50px 10px #48b1bc;
+}
