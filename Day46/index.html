@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端修練_精神時光屋_Week2</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div id="app">
+    {{success}}
+    <br>
+    {{message}}
+     <br>
+    {{nickName}}
+     <br>
+    {{timeStamp}}
+     <br>
+    {{Certificate}}
+    <input type="button" value="button" v-on:click="prompt()">
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
